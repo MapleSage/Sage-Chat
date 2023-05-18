@@ -80,5 +80,32 @@
         "sagechat": {}
       }
     }
+  },
+  "test": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-sagechat-test-145728-authRole",
+      "UnauthRoleArn": "arn:aws:iam::760692866489:role/amplify-sagechat-test-145728-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::760692866489:role/amplify-sagechat-test-145728-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-sagechat-test-145728-deployment",
+      "UnauthRoleName": "amplify-sagechat-test-145728-unauthRole",
+      "StackName": "amplify-sagechat-test-145728",
+      "StackId": "arn:aws:cloudformation:us-east-1:760692866489:stack/amplify-sagechat-test-145728/38caf730-f55e-11ed-89c0-12c48b848691",
+      "AmplifyAppId": "d3t927keq6iq17"
+    },
+    "categories": {
+      "auth": {
+        "sagechat14cdaa9b": {}
+      },
+      "function": {
+        "ChatlambdaFunction": {
+          "deploymentBucketName": "amplify-sagechat-test-145728-deployment",
+          "s3Key": "amplify-builds/ChatlambdaFunction-4f79485661542b4a6e35-build.zip"
+        }
+      },
+      "api": {
+        "sagechat": {}
+      }
+    }
   }
 }
