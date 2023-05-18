@@ -1,0 +1,8 @@
+{
+    "transform": {
+        "schema": {
+            "directive": "directive @auth(rules: [AuthRule]) on OBJECT | FIELD_DEFINITION",
+            "version": "2018-05-29"
+        }
+    }
+}

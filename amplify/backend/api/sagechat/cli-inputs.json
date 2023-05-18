@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "sagechat",
+    "serviceName": "AppSync",
+    "defaultAuthType": {
+      "mode": "AWS_LAMBDA",
+      "lambdaFunction": "ChatlambdaFunction",
+      "ttlSeconds": "300"
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "API_KEY",
+        "expirationTime": 365,
+        "apiKeyExpirationDate": "2024-05-11T12:20:51.119Z",
+        "keyDescription": "api sagechat"
+      },
+      {
+        "mode": "AMAZON_COGNITO_USER_POOLS",
+        "cognitoUserPoolId": "authsagechat14cdaa9b"
+      }
+    ],
+    "conflictResolution": {}
+  }
+}

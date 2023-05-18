@@ -1,0 +1,84 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-sagechat-dev-140805-authRole",
+      "UnauthRoleArn": "arn:aws:iam::760692866489:role/amplify-sagechat-dev-140805-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::760692866489:role/amplify-sagechat-dev-140805-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-sagechat-dev-140805-deployment",
+      "UnauthRoleName": "amplify-sagechat-dev-140805-unauthRole",
+      "StackName": "amplify-sagechat-dev-140805",
+      "StackId": "arn:aws:cloudformation:us-east-1:760692866489:stack/amplify-sagechat-dev-140805/ab89ab80-ed7b-11ed-9c6d-1283b2a21685",
+      "AmplifyAppId": "d1ofawq2nrw1r4"
+    },
+    "categories": {
+      "function": {
+        "ChatlambdaFunction": {
+          "deploymentBucketName": "amplify-sagechat-dev-140805-deployment",
+          "s3Key": "amplify-builds/ChatlambdaFunction-687a756769315168562b-build.zip"
+        }
+      },
+      "api": {
+        "sagechat": {}
+      },
+      "auth": {
+        "sagechat2d32a195": {},
+        "sagechat14cdaa9b": {}
+      }
+    }
+  },
+  "env": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-sagechat-env-82823-authRole",
+      "UnauthRoleArn": "arn:aws:iam::760692866489:role/amplify-sagechat-env-82823-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::760692866489:role/amplify-sagechat-env-82823-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-sagechat-env-82823-deployment",
+      "UnauthRoleName": "amplify-sagechat-env-82823-unauthRole",
+      "StackName": "amplify-sagechat-env-82823",
+      "StackId": "arn:aws:cloudformation:us-east-1:760692866489:stack/amplify-sagechat-env-82823/de6b0a40-f527-11ed-96a1-0e925e7c6127",
+      "AmplifyAppId": "d1kdkspoekz2ty"
+    },
+    "categories": {
+      "auth": {
+        "sagechat14cdaa9b": {}
+      },
+      "function": {
+        "ChatlambdaFunction": {
+          "deploymentBucketName": "amplify-sagechat-env-82823-deployment",
+          "s3Key": "amplify-builds/ChatlambdaFunction-654c415a7a737646484e-build.zip"
+        }
+      },
+      "api": {
+        "sagechat": {}
+      }
+    }
+  },
+  "venv": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-sagechat-venv-133639-authRole",
+      "UnauthRoleArn": "arn:aws:iam::760692866489:role/amplify-sagechat-venv-133639-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::760692866489:role/amplify-sagechat-venv-133639-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-sagechat-venv-133639-deployment",
+      "UnauthRoleName": "amplify-sagechat-venv-133639-unauthRole",
+      "StackName": "amplify-sagechat-venv-133639",
+      "StackId": "arn:aws:cloudformation:us-east-1:760692866489:stack/amplify-sagechat-venv-133639/eeaea620-f552-11ed-baf0-0e3cc3fc9e57",
+      "AmplifyAppId": "drara3tpbzebe"
+    },
+    "categories": {
+      "auth": {
+        "sagechat14cdaa9b": {}
+      },
+      "function": {
+        "ChatlambdaFunction": {
+          "deploymentBucketName": "amplify-sagechat-venv-133639-deployment",
+          "s3Key": "amplify-builds/ChatlambdaFunction-4f79485661542b4a6e35-build.zip"
+        }
+      },
+      "api": {
+        "sagechat": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+    "Comment": "A state machine that invokes a Lambda function",
+    "StartAt": "InvokeLambda",
+    "States": {
+      "InvokeLambda": {
+        "Type": "Task",
+        "Resource": "arn:aws:states:::lambda:invoke.waitForTaskToken",
+        "Parameters": {
+          "FunctionName": "lambda_function",
+          "Payload": {
+            "taskToken.$": "$$.Task.Token",
+            "input.$": "$.input"
+          }
+        },
+        "ResultPath": "$.lambda_output",
+        "Catch": [
+          {
+            "ErrorEquals": ["States.ALL"],
+            "Next": "HandleError"
+          }
+        ],
+        "End": true
+      },
+      "HandleError": {
+        "Type": "Fail",
+        "Error": "InternalError",
+        "Cause": "An error occurred while invoking the Lambda function"
+      }
+    }
+  }
+  

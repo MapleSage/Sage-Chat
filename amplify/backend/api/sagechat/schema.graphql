@@ -1,0 +1,56 @@
+type Todo @model {
+  id: ID!
+  task: String!
+  description: String!
+  isComplete: Boolean!
+}
+
+type Message @model {
+  id: ID!
+  content: String!
+}
+
+type Chat @model {
+  id: ID!
+  text: String!
+  response: String
+}
+
+type ChatLambdaFunctionResponse {
+  result: String!
+}
+
+type Query {
+  getTodoById(id: ID!): Todo @auth(rules: [{ allow: owner }])
+  getTodos(
+    orderBy: String!
+    limit: Int!
+  ): [Todo] @auth(rules: [{ allow: owner }])
+  getMessageById(id: ID!): Message @auth(rules: [{ allow: owner }])
+  getMessages: [Message] @auth(rules: [{ allow: owner }])
+  getChatLambdaFunctionResponse(text: String!): ChatLambdaFunctionResponse
+}
+
+type Mutation {
+  addTodo(
+    task: String!
+    description: String!
+    isComplete: Boolean!
+  ): Todo @auth(rules: [{ allow: owner }])
+  restoreTodo(
+    id: ID!
+    task: String!
+    description: String!
+    isComplete: Boolean!
+  ): Todo @auth(rules: [{ allow: owner }])
+  removeTodo(id: ID!): Todo @auth(rules: [{ allow: owner }])
+  generateMessage(content: String!): Message @auth(rules: [{ allow: owner }])
+  restoreMessage(id: ID!, content: String!): Message @auth(rules: [{ allow: owner }])
+  removeMessage(id: ID!): Message @auth(rules: [{ allow: owner }])
+  sendChatLambdaFunction(text: String!): ChatLambdaFunctionResponse
+}
+
+
+
+
+
