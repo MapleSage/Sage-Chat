@@ -46,7 +46,7 @@
       "function": {
         "ChatlambdaFunction": {
           "deploymentBucketName": "amplify-sagechat-env-160117-deployment",
-          "s3Key": "amplify-builds/ChatlambdaFunction-4f79485661542b4a6e35-build.zip"
+          "s3Key": "amplify-builds/ChatlambdaFunction-554c6279504568353857-build.zip"
         }
       },
       "api": {
