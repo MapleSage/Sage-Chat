@@ -2,13 +2,64 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const getTodoById = /* GraphQL */ `
+  query GetTodoById($id: ID!) {
+    getTodoById(id: $id) {
+      id
+      task
+      description
+      isComplete
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const getTodos = /* GraphQL */ `
+  query GetTodos($orderBy: String!, $limit: Int!) {
+    getTodos(orderBy: $orderBy, limit: $limit) {
+      id
+      task
+      description
+      isComplete
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const getMessageById = /* GraphQL */ `
+  query GetMessageById($id: ID!) {
+    getMessageById(id: $id) {
+      id
+      content
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const getMessages = /* GraphQL */ `
+  query GetMessages {
+    getMessages {
+      id
+      content
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const getChatLambdaFunctionResponse = /* GraphQL */ `
+  query GetChatLambdaFunctionResponse($text: String!) {
+    getChatLambdaFunctionResponse(text: $text) {
+      result
+    }
+  }
+`;
 export const getTodo = /* GraphQL */ `
   query GetTodo($id: ID!) {
     getTodo(id: $id) {
       id
-      name
+      task
       description
-      done
+      isComplete
       createdAt
       updatedAt
     }
@@ -23,9 +74,9 @@ export const listTodos = /* GraphQL */ `
     listTodos(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        name
+        task
         description
-        done
+        isComplete
         createdAt
         updatedAt
       }
@@ -33,150 +84,57 @@ export const listTodos = /* GraphQL */ `
     }
   }
 `;
-export const getBlog = /* GraphQL */ `
-  query GetBlog($id: ID!) {
-    getBlog(id: $id) {
+export const getMessage = /* GraphQL */ `
+  query GetMessage($id: ID!) {
+    getMessage(id: $id) {
       id
-      name
-      posts {
-        items {
-          id
-          title
-          createdAt
-          updatedAt
-          blogPostsId
-        }
-        nextToken
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const listBlogs = /* GraphQL */ `
-  query ListBlogs(
-    $filter: ModelBlogFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listBlogs(filter: $filter, limit: $limit, nextToken: $nextToken) {
-      items {
-        id
-        name
-        posts {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      nextToken
-    }
-  }
-`;
-export const getPost = /* GraphQL */ `
-  query GetPost($id: ID!) {
-    getPost(id: $id) {
-      id
-      title
-      blog {
-        id
-        name
-        posts {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      comments {
-        items {
-          id
-          content
-          createdAt
-          updatedAt
-          postCommentsId
-        }
-        nextToken
-      }
-      createdAt
-      updatedAt
-      blogPostsId
-    }
-  }
-`;
-export const listPosts = /* GraphQL */ `
-  query ListPosts(
-    $filter: ModelPostFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listPosts(filter: $filter, limit: $limit, nextToken: $nextToken) {
-      items {
-        id
-        title
-        blog {
-          id
-          name
-          createdAt
-          updatedAt
-        }
-        comments {
-          nextToken
-        }
-        createdAt
-        updatedAt
-        blogPostsId
-      }
-      nextToken
-    }
-  }
-`;
-export const getComment = /* GraphQL */ `
-  query GetComment($id: ID!) {
-    getComment(id: $id) {
-      id
-      post {
-        id
-        title
-        blog {
-          id
-          name
-          createdAt
-          updatedAt
-        }
-        comments {
-          nextToken
-        }
-        createdAt
-        updatedAt
-        blogPostsId
-      }
       content
       createdAt
       updatedAt
-      postCommentsId
     }
   }
 `;
-export const listComments = /* GraphQL */ `
-  query ListComments(
-    $filter: ModelCommentFilterInput
+export const listMessages = /* GraphQL */ `
+  query ListMessages(
+    $filter: ModelMessageFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listComments(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listMessages(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        post {
-          id
-          title
-          createdAt
-          updatedAt
-          blogPostsId
-        }
         content
         createdAt
         updatedAt
-        postCommentsId
+      }
+      nextToken
+    }
+  }
+`;
+export const getChat = /* GraphQL */ `
+  query GetChat($id: ID!) {
+    getChat(id: $id) {
+      id
+      text
+      response
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listChats = /* GraphQL */ `
+  query ListChats(
+    $filter: ModelChatFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listChats(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        text
+        response
+        createdAt
+        updatedAt
       }
       nextToken
     }
